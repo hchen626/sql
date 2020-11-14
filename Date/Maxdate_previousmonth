@@ -1,0 +1,6 @@
+select max(date_field)
+from table
+where date_field >= add_months(trunc(sysdate,'mm'),-1) and
+      date_field < trunc(sysdate,'mm')
+;
+      
